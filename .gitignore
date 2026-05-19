@@ -1,0 +1,8 @@
+.vscode/
+.idea/
+*.log
+*.tmp
+*.bak
+model-comparisons.json
+model-comparisons.html
+TestResults/
