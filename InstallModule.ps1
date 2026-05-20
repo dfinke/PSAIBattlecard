@@ -9,7 +9,7 @@ param(
 
 $ErrorActionPreference = 'Stop'
 
-$repoRoot = Split-Path -Path $PSScriptRoot -Parent
+$repoRoot = $PSScriptRoot
 $manifestPath = Join-Path -Path $repoRoot -ChildPath 'PSAIBattlecard.psd1'
 $manifest = Test-ModuleManifest -Path $manifestPath
 

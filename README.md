@@ -30,7 +30,7 @@ Import-Module .\PSAIBattlecard.psd1 -Force
 To install the current checkout into your user module path:
 
 ```powershell
-.\scripts\Install-Local.ps1 -Clean
+.\InstallModule.ps1 -Clean
 Import-Module PSAIBattlecard -Force
 ```
 
@@ -112,13 +112,13 @@ Set your Gallery API key, run tests, stage a clean module package, and publish:
 
 ```powershell
 $env:PSGALLERY_API_KEY = '<your API key>'
-.\scripts\Publish-Gallery.ps1
+.\PublishToGallery.ps1
 ```
 
 To preview the publish operation without sending it:
 
 ```powershell
-.\scripts\Publish-Gallery.ps1 -WhatIf
+.\PublishToGallery.ps1 -WhatIf
 ```
 
 The publish script packages only the module files needed by Gallery into
