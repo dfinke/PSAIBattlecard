@@ -27,6 +27,13 @@ During local development from this repository:
 Import-Module .\PSAIBattlecard.psd1 -Force
 ```
 
+To install the current checkout into your user module path:
+
+```powershell
+.\scripts\Install-Local.ps1 -Clean
+Import-Module PSAIBattlecard -Force
+```
+
 PSAIBattlecard depends on `PSAISuite` `0.8.1` or later.
 
 ## Launch The Dashboard
@@ -98,3 +105,21 @@ Set-ModelComparisonRating -RunId '<run id>' -Model 'openai:gpt-4o-mini' -Accurac
 
 The `docs/demo-script.md` file has a three-minute read-aloud demo script.
 Paste-ready model and prompt lists live in `examples/`.
+
+## Publish To PowerShell Gallery
+
+Set your Gallery API key, run tests, stage a clean module package, and publish:
+
+```powershell
+$env:PSGALLERY_API_KEY = '<your API key>'
+.\scripts\Publish-Gallery.ps1
+```
+
+To preview the publish operation without sending it:
+
+```powershell
+.\scripts\Publish-Gallery.ps1 -WhatIf
+```
+
+The publish script packages only the module files needed by Gallery into
+`artifacts/PSAIBattlecard` before calling `Publish-PSResource`.
