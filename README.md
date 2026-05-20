@@ -15,6 +15,22 @@ PSAIBattlecard is a standalone model comparison dashboard for PowerShell. It use
 model execution, then stores prompts, responses, latency, errors, and human ratings
 in a local JSON file.
 
+## Screenshots
+
+![PSAIBattlecard dashboard overview](./docs/images/dashboard-overview.png)
+
+### Prompt And Model Setup
+
+![Prompt and model setup](./docs/images/prompt-and-models.png)
+
+### Side-By-Side Response Cards
+
+![Side-by-side response cards](./docs/images/response-cards.png)
+
+### Human Ratings
+
+![Human ratings panel](./docs/images/ratings-panel.png)
+
 ## Install
 
 ```powershell
