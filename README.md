@@ -17,19 +17,49 @@ in a local JSON file.
 
 ## Screenshots
 
+Start with a prompt, a model roster, and a history pane that stays close while
+you compare responses. The dashboard is intentionally simple: one screen for
+running the comparison, reviewing previous runs, and seeing how each provider
+answered.
+
 ![PSAIBattlecard dashboard overview](./docs/images/dashboard-overview.png)
+
+The full view shows the core loop: choose models, run a prompt, inspect the
+cards, then jump back through prior queries when you want to compare behavior
+over time.
 
 ### Prompt And Model Setup
 
+The prompt box is free-form, and the model list is deliberately plain text:
+one `provider:model` pair per line. That makes it easy to paste a quick roster,
+swap providers, or save a repeatable setup in a script.
+
 ![Prompt and model setup](./docs/images/prompt-and-models.png)
+
+This keeps the UI light while PSAISuite handles the provider-specific model
+execution underneath.
 
 ### Side-By-Side Response Cards
 
+Each model gets its own card with provider, model name, latency, status, and
+the response body. Differences in format, completeness, speed, and tone become
+visible without digging through logs.
+
 ![Side-by-side response cards](./docs/images/response-cards.png)
+
+The JSON store preserves those cards so a quick comparison can become a useful
+history of model behavior.
 
 ### Human Ratings
 
+Ratings turn a run into signal. Mark accuracy, relevance, completeness,
+conciseness, and bias directly on each response, then search or revisit those
+judgments later.
+
 ![Human ratings panel](./docs/images/ratings-panel.png)
+
+That closes the loop: PSAIBattlecard is not just a response viewer, it is a
+lightweight battlecard for deciding which AI is best suited to a real task.
 
 ## Install
 
